@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject _menuPanel;
     [SerializeField] private GameObject _gamePanel;
 
-    private GameController _gameController;
+    [Inject] private GameController _gameController;
 
 #if UNITY_EDITOR
 
@@ -37,7 +37,7 @@ public class UIController : MonoBehaviour
         _gamePanel?.SetActive(true);
     }
 
-
+    // Отключаем кнопку рестарт.
     public void HideGamePanel()
     {
         _gamePanel?.SetActive(false);
