@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public abstract class AbstractUnit : MonoBehaviour
+public class AbstractUnit : MonoBehaviour
 {
-    protected float _speed;
-    protected float _finishPos;
-    protected GameController _gameController;
+    [Inject] protected float _speed;
+    [Inject] protected float _finishPos;
+    [Inject] protected GameController _gameController;
 
     private void Update()
     {
         if (_gameController.CanMove)
         {
-
+            Move();
         }
     }
-    protected abstract void Move();
+    protected virtual void Move() { }
 }

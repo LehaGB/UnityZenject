@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class PlayerController : AbstractUnit
 {
@@ -8,12 +9,17 @@ public class PlayerController : AbstractUnit
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.Translate(Vector3.right * _speed * Time.deltaTime);
+            transform.Translate(Vector3.up * _speed * Time.deltaTime);
 
             if (transform.position.y > _finishPos)
             {
                 Debug.Log("You Win");
             }
         }
+    }
+
+    public class PlayerFabric : PlaceholderFactory<float, float, GameController, PlayerController>
+    {
+
     }
 }

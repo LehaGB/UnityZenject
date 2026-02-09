@@ -16,5 +16,8 @@ MonoBehaviour:
   OpponentMinSpeed: 2
   OpponentMaxSpeed: 3
   PlayerSpeed: 1.41
-  StartPos: {x: 0, y: 0, z: 0}
-  DistanceBetweenOpponents: 12
+  StartPos: {x: -8, y: 0.5, z: -10}
+  finishPos: {x: 0, y: 1.4, z: 10}
+  DistanceBetweenOpponents: 1.7
+  PlayerPrefab: {fileID: 1600349282221438906, guid: c29eee7d575533e4b96dad575fe50197, type: 3}
+  OpponentPrefab: {fileID: 518440687822348490, guid: a0b6234e834f2cc48870b932b9bb846c, type: 3}
